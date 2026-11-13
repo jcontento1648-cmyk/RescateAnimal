@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Listado organizado de los casos de rescate registrados en el refugio PatitasSeguras.">
+  <title>PatitasSeguras | Rescates registrados</title>
+  <link rel="icon" type="image/svg+xml" href="logo.svg">
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <a class="saltar" href="#contenido">Saltar al contenido</a>
+
+  <header class="encabezado">
+    <div class="encabezado__interior">
+      <a class="marca" href="index.html">
+        <img src="logo.svg" alt="Logotipo de PatitasSeguras" width="44" height="44">
+        <span>PatitasSeguras <small>Rescate y adopción animal</small></span>
+      </a>
+      <nav aria-label="Menú principal">
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="reportar.html">Reportar animal</a></li>
+          <li><a href="rescates.html" aria-current="page">Rescates</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido">
+
+    <section aria-labelledby="titulo-rescates">
+      <p class="etiqueta">Seguimiento de casos</p>
+      <h1 id="titulo-rescates">Rescates registrados</h1>
+      <p class="intro">Consulta los casos del refugio y filtra por especie, estado o encargado. Cada cambio de estado queda registrado con su fecha y responsable.</p>
+
+      <form class="filtros" action="rescates.html" method="get" aria-label="Filtros de casos">
+        <div class="campo">
+          <label for="f-especie">Especie</label>
+          <select id="f-especie" name="especie">
+            <option value="">Todas</option>
+            <option value="perros">Perros</option>
+            <option value="gatos">Gatos</option>
+            <option value="fauna-silvestre">Fauna Silvestre</option>
+          </select>
+        </div>
+        <div class="campo">
+          <label for="f-estado">Estado</label>
+          <select id="f-estado" name="estado">
+            <option value="">Todos</option>
+            <option value="rescatado">Rescatado</option>
+            <option value="en-tratamiento">En Tratamiento</option>
+            <option value="en-adopcion">En Adopción</option>
+            <option value="adoptado">Adoptado</option>
+          </select>
+        </div>
+        <div class="campo">
+          <label for="f-encargado">Encargado</label>
+          <input type="text" id="f-encargado" name="encargado" placeholder="Nombre del encargado">
+        </div>
+        <div class="campo">
+          <button type="submit">Filtrar casos</button>
+        </div>
+      </form>
+
+      <div class="tabla-scroll" role="region" aria-labelledby="titulo-tabla" tabindex="0">
+        <table>
+          <caption id="titulo-tabla">Casos de rescate y adopción</caption>
+          <thead>
+            <tr>
+              <th scope="col">N.º caso</th>
+              <th scope="col">Animal</th>
+              <th scope="col">Especie</th>
+              <th scope="col">Urgencia</th>
+              <th scope="col">Estado</th>
+              <th scope="col">Encargado</th>
+              <th scope="col">Ingreso</th>
+            </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <th scope="row">PS-001</th>
+            <td>Luna, perra mestiza</td>
+            <td>Perros</td>
+            <td><span class="urgencia urgencia--alta">Alta</span></td>
+            <td><span class="estado estado--tratamiento">En Tratamiento</span></td>
+            <td>Dra. María Párraga</td>
+            <td><time datetime="2026-10-02">2 oct 2026</time></td>
+          </tr>
+          <tr>
+            <th scope="row">PS-002</th>
+            <td>Michi, gato atigrado</td>
+            <td>Gatos</td>
+            <td><span class="urgencia urgencia--media">Media</span></td>
+            <td><span class="estado estado--rescatado">Rescatado</span></td>
+            <td>Luis Vera (voluntario)</td>
+            <td><time datetime="2026-10-09">9 oct 2026</time></td>
+          </tr>
+          <tr>
+            <th scope="row">PS-003</th>
+            <td>Mono aullador juvenil</td>
+            <td>Fauna silvestre</td>
+            <td><span class="urgencia urgencia--alta">Alta</span></td>
+            <td><span class="estado estado--tratamiento">En Tratamiento</span></td>
+            <td>Dr. Andrés Mero</td>
+            <td><time datetime="2026-10-12">12 oct 2026</time></td>
+          </tr>
+          <tr>
+            <th scope="row">PS-004</th>
+            <td>Rocky, perro adulto</td>
+            <td>Perros</td>
+            <td><span class="urgencia urgencia--baja">Baja</span></td>
+            <td><span class="estado estado--adopcion">En Adopción</span></td>
+            <td>Ana Loor (voluntaria)</td>
+            <td><time datetime="2026-09-21">21 sep 2026</time></td>
+          </tr>
+          <tr>
+            <th scope="row">PS-005</th>
+            <td>Nube, gata blanca</td>
+            <td>Gatos</td>
+            <td><span class="urgencia urgencia--baja">Baja</span></td>
+            <td><span class="estado estado--adoptado">Adoptado</span></td>
+            <td>Carla Intriago (voluntaria)</td>
+            <td><time datetime="2026-09-14">14 sep 2026</time></td>
+          </tr>
+          <tr>
+            <th scope="row">PS-006</th>
+            <td>Iguana verde</td>
+            <td>Fauna silvestre</td>
+            <td><span class="urgencia urgencia--media">Media</span></td>
+            <td><span class="estado estado--rescatado">Rescatado</span></td>
+            <td>Pedro Alcívar (voluntario)</td>
+            <td><time datetime="2026-10-20">20 oct 2026</time></td>
+          </tr>
+          <tr>
+            <th scope="row">PS-007</th>
+            <td>Canelo, cachorro</td>
+            <td>Perros</td>
+            <td><span class="urgencia urgencia--alta">Alta</span></td>
+            <td><span class="estado estado--rescatado">Rescatado</span></td>
+            <td>Sin asignar</td>
+            <td><time datetime="2026-11-03">3 nov 2026</time></td>
+          </tr>
+          <tr>
+            <th scope="row">PS-008</th>
+            <td>Tigre, gato naranja</td>
+            <td>Gatos</td>
+            <td><span class="urgencia urgencia--media">Media</span></td>
+            <td><span class="estado estado--adopcion">En Adopción</span></td>
+            <td>Dra. María Párraga</td>
+            <td><time datetime="2026-10-28">28 oct 2026</time></td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section aria-labelledby="titulo-especies">
+      <h2 id="titulo-especies">Casos por especie</h2>
+      <ul class="resumen-especie">
+        <li>Perros: 3 casos</li>
+        <li>Gatos: 3 casos</li>
+        <li>Fauna silvestre: 2 casos</li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="titulo-estados">
+      <p class="etiqueta">Guía rápida</p>
+      <h2 id="titulo-estados">Qué significa cada estado</h2>
+      <div class="leyenda">
+        <article>
+          <h3><span class="estado estado--rescatado">Rescatado</span></h3>
+          <p>El animal ingresó al refugio y está en observación inicial.</p>
+        </article>
+        <article>
+          <h3><span class="estado estado--tratamiento">En Tratamiento</span></h3>
+          <p>Un veterinario evalúa al animal y registra su atención médica.</p>
+        </article>
+        <article>
+          <h3><span class="estado estado--adopcion">En Adopción</span></h3>
+          <p>Recibió el alta médica y está publicado para ser adoptado.</p>
+        </article>
+        <article>
+          <h3><span class="estado estado--adoptado">Adoptado</span></h3>
+          <p>Ya tiene hogar y el caso se da por cerrado.</p>
+        </article>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="pie">
+    <div class="pie__interior">
+      <div>
+        <h2>Contacto del refugio</h2>
+        <address>
+          Refugio PatitasSeguras<br>
+          Portoviejo, Manabí, Ecuador<br>
+          Teléfono: <a href="tel:+593990000000">+593 99 000 0000</a><br>
+          Correo: <a href="mailto:contacto@patitasseguras.ec">contacto@patitasseguras.ec</a>
+        </address>
+      </div>
+      <nav aria-label="Enlaces del pie de página">
+        <h2>Navegación</h2>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="reportar.html">Reportar animal</a></li>
+          <li><a href="rescates.html">Rescates</a></li>
+        </ul>
+      </nav>
+      <p class="derechos">&copy; 2026 PatitasSeguras. Prototipo académico de Desarrollo de Sistemas Informáticos, Universidad Técnica de Manabí. Autor: Jean Pierre Contento Rosado.</p>
+    </div>
+  </footer>
+</body>
+</html>

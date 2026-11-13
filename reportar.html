@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Formulario para registrar el ingreso de un nuevo animal rescatado en el refugio PatitasSeguras.">
+  <title>PatitasSeguras | Reportar animal rescatado</title>
+  <link rel="icon" type="image/svg+xml" href="logo.svg">
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <a class="saltar" href="#contenido">Saltar al contenido</a>
+
+  <header class="encabezado">
+    <div class="encabezado__interior">
+      <a class="marca" href="index.html">
+        <img src="logo.svg" alt="Logotipo de PatitasSeguras" width="44" height="44">
+        <span>PatitasSeguras <small>Rescate y adopción animal</small></span>
+      </a>
+      <nav aria-label="Menú principal">
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="reportar.html" aria-current="page">Reportar animal</a></li>
+          <li><a href="rescates.html">Rescates</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido">
+
+    <section aria-labelledby="titulo-reportar">
+      <p class="etiqueta">Nuevo ingreso</p>
+      <h1 id="titulo-reportar">Reportar un animal rescatado</h1>
+      <p class="intro">Completa los datos del caso con el mayor detalle posible. Con esta información el equipo decidirá quién se encarga del rescate y con qué urgencia.</p>
+
+      <div class="contenedor-formulario">
+        <form action="rescates.html" method="get">
+
+          <fieldset>
+            <legend>Datos del caso</legend>
+            <div class="campo">
+              <label for="titulo">Título del caso o nombre provisional
+                <span class="ayuda">Por ejemplo: perrita café de la Av. Metropolitana.</span>
+              </label>
+              <input type="text" id="titulo" name="titulo" maxlength="80" required placeholder="Escribe un título o nombre provisional">
+            </div>
+            <div class="fila">
+              <div class="campo">
+                <label for="categoria">Categoría</label>
+                <select id="categoria" name="categoria" required>
+                  <option value="">Selecciona una categoría</option>
+                  <option value="perros">Perros</option>
+                  <option value="gatos">Gatos</option>
+                  <option value="fauna-silvestre">Fauna Silvestre</option>
+                </select>
+              </div>
+              <div class="campo">
+                <label for="fecha">Fecha del rescate</label>
+                <input type="date" id="fecha" name="fecha" required>
+              </div>
+            </div>
+            <div class="campo">
+              <label for="ubicacion">Ubicación donde se encontró</label>
+              <input type="text" id="ubicacion" name="ubicacion" maxlength="120" required placeholder="Barrio, calle o punto de referencia">
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Urgencia médica</legend>
+            <div class="opciones">
+              <label for="urgencia-alta"><input type="radio" id="urgencia-alta" name="urgencia" value="alta" required> Alta</label>
+              <label for="urgencia-media"><input type="radio" id="urgencia-media" name="urgencia" value="media"> Media</label>
+              <label for="urgencia-baja"><input type="radio" id="urgencia-baja" name="urgencia" value="baja"> Baja</label>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Estado en que se encontró</legend>
+            <div class="campo">
+              <label for="descripcion">Descripción detallada
+                <span class="ayuda">Heridas visibles, comportamiento, señas particulares y cualquier dato útil.</span>
+              </label>
+              <textarea id="descripcion" name="descripcion" rows="6" minlength="20" required placeholder="Describe cómo estaba el animal cuando lo encontraste"></textarea>
+            </div>
+            <div class="campo">
+              <label for="foto">Fotografía del animal (opcional)</label>
+              <input type="file" id="foto" name="foto" accept="image/*">
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Datos de contacto de quien reporta</legend>
+            <div class="fila">
+              <div class="campo">
+                <label for="reportante">Nombre completo</label>
+                <input type="text" id="reportante" name="reportante" maxlength="80" required autocomplete="name">
+              </div>
+              <div class="campo">
+                <label for="telefono">Teléfono</label>
+                <input type="tel" id="telefono" name="telefono" autocomplete="tel" placeholder="0990000000">
+              </div>
+            </div>
+            <div class="campo">
+              <label for="correo">Correo electrónico (opcional)</label>
+              <input type="email" id="correo" name="correo" autocomplete="email">
+            </div>
+          </fieldset>
+
+          <div class="acciones">
+            <button type="submit">Registrar rescate</button>
+            <button type="reset">Limpiar formulario</button>
+          </div>
+        </form>
+
+        <aside class="panel-lateral" aria-labelledby="titulo-consejos">
+          <h2 id="titulo-consejos">Antes de reportar</h2>
+          <ul>
+            <li>Mantén la calma y no persigas al animal.</li>
+            <li>Si está herido, evita moverlo bruscamente.</li>
+            <li>Con fauna silvestre, no la alimentes ni la manipules sin guantes.</li>
+            <li>Anota un punto de referencia claro para ubicarlo rápido.</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="pie">
+    <div class="pie__interior">
+      <div>
+        <h2>Contacto del refugio</h2>
+        <address>
+          Refugio PatitasSeguras<br>
+          Portoviejo, Manabí, Ecuador<br>
+          Teléfono: <a href="tel:+593990000000">+593 99 000 0000</a><br>
+          Correo: <a href="mailto:contacto@patitasseguras.ec">contacto@patitasseguras.ec</a>
+        </address>
+      </div>
+      <nav aria-label="Enlaces del pie de página">
+        <h2>Navegación</h2>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="reportar.html">Reportar animal</a></li>
+          <li><a href="rescates.html">Rescates</a></li>
+        </ul>
+      </nav>
+      <p class="derechos">&copy; 2026 PatitasSeguras. Prototipo académico de Desarrollo de Sistemas Informáticos, Universidad Técnica de Manabí. Autor: Jean Pierre Contento Rosado.</p>
+    </div>
+  </footer>
+</body>
+</html>

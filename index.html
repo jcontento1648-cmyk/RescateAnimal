@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="PatitasSeguras: sistema de control de rescate y adopción animal. Panel principal con el resumen del refugio.">
+  <title>PatitasSeguras | Panel principal</title>
+  <link rel="icon" type="image/svg+xml" href="logo.svg">
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <a class="saltar" href="#contenido">Saltar al contenido</a>
+
+  <header class="encabezado">
+    <div class="encabezado__interior">
+      <a class="marca" href="index.html">
+        <img src="logo.svg" alt="Logotipo de PatitasSeguras" width="44" height="44">
+        <span>PatitasSeguras <small>Rescate y adopción animal</small></span>
+      </a>
+      <nav aria-label="Menú principal">
+        <ul>
+          <li><a href="index.html" aria-current="page">Inicio</a></li>
+          <li><a href="reportar.html">Reportar animal</a></li>
+          <li><a href="rescates.html">Rescates</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido">
+
+    <section class="hero" aria-labelledby="titulo-bienvenida">
+      <p class="etiqueta">Bienvenido al panel del refugio</p>
+      <h1 id="titulo-bienvenida">Cada patita merece volver a casa</h1>
+      <p>PatitasSeguras reúne en un solo lugar el reporte, el seguimiento y la adopción de perros, gatos y fauna silvestre rescatados. Desde aquí puedes registrar un nuevo caso o revisar cómo avanza cada rescate.</p>
+      <div class="botones">
+        <a class="boton boton--principal" href="reportar.html">Reportar un animal</a>
+        <a class="boton boton--claro" href="rescates.html">Ver rescates registrados</a>
+      </div>
+    </section>
+
+    <section aria-labelledby="titulo-resumen">
+      <p class="etiqueta">Resumen del refugio</p>
+      <h2 id="titulo-resumen">El refugio en números</h2>
+      <p class="intro">Cifras de referencia para el prototipo. Más adelante se calcularán a partir de los casos registrados.</p>
+      <div class="estadisticas">
+        <article class="dato">
+          <h3 class="dato__texto">Casos activos</h3>
+          <p class="dato__numero">18</p>
+        </article>
+        <article class="dato">
+          <h3 class="dato__texto">Animales en tratamiento</h3>
+          <p class="dato__numero">7</p>
+        </article>
+        <article class="dato">
+          <h3 class="dato__texto">Disponibles para adopción</h3>
+          <p class="dato__numero">5</p>
+        </article>
+        <article class="dato">
+          <h3 class="dato__texto">Adopciones concretadas</h3>
+          <p class="dato__numero">42</p>
+        </article>
+        <article class="dato">
+          <h3 class="dato__texto">Voluntarios y veterinarios</h3>
+          <p class="dato__numero">31</p>
+        </article>
+      </div>
+    </section>
+
+    <section aria-labelledby="titulo-recientes">
+      <p class="etiqueta">Últimos ingresos</p>
+      <h2 id="titulo-recientes">Casos recientes</h2>
+      <div class="rejilla">
+        <article class="tarjeta">
+          <img src="imagen2.jpg" alt="Perra mestiza rescatada descansando en el refugio" width="800" height="600">
+          <div class="tarjeta__cuerpo">
+            <p class="etiqueta">Perros</p>
+            <h3>Luna, perra mestiza</h3>
+            <p>Encontrada en la vía a Crucita con una herida leve en una pata. Recibe curaciones diarias.</p>
+            <p><span class="estado estado--tratamiento">En Tratamiento</span></p>
+          </div>
+        </article>
+        <article class="tarjeta">
+          <img src="imagen3.jpg" alt="Gato atigrado rescatado mirando a la cámara" width="800" height="600">
+          <div class="tarjeta__cuerpo">
+            <p class="etiqueta">Gatos</p>
+            <h3>Michi, gato atigrado</h3>
+            <p>Rescatado de una alcantarilla en el centro de la ciudad. Está en observación y con buen apetito.</p>
+            <p><span class="estado estado--rescatado">Rescatado</span></p>
+          </div>
+        </article>
+        <article class="tarjeta">
+          <img src="imagen4.jpg" alt="Mono aullador joven recibiendo cuidados" width="800" height="600">
+          <div class="tarjeta__cuerpo">
+            <p class="etiqueta">Fauna silvestre</p>
+            <h3>Mono aullador juvenil</h3>
+            <p>Hallado deshidratado cerca de un camino rural. Un veterinario evalúa su recuperación.</p>
+            <p><span class="estado estado--tratamiento">En Tratamiento</span></p>
+          </div>
+        </article>
+      </div>
+      <p><a href="rescates.html">Ver el listado completo de casos &rarr;</a></p>
+    </section>
+
+    <section aria-labelledby="titulo-proceso">
+      <p class="etiqueta">Cómo funciona</p>
+      <h2 id="titulo-proceso">Del reporte a la adopción</h2>
+      <ol class="pasos">
+        <li><strong>Reporte</strong> Una persona avisa de un animal en riesgo y registra su ubicación.</li>
+        <li><strong>Rescate</strong> Se crea el caso y un voluntario o veterinario queda como encargado.</li>
+        <li><strong>Tratamiento</strong> El animal recibe atención médica y se registra su evolución.</li>
+        <li><strong>Adopción</strong> Cuando está listo, se publica y se entrega a una familia responsable.</li>
+      </ol>
+    </section>
+
+    <section aria-labelledby="titulo-refugio">
+      <div class="dos-columnas">
+        <div>
+          <p class="etiqueta">Sobre el refugio</p>
+          <h2 id="titulo-refugio">Un equipo que trabaja por ellos</h2>
+          <p>El refugio funciona gracias a voluntarios, veterinarios y familias que ofrecen un hogar temporal. Todos los casos quedan registrados para que cada cambio de estado tenga fecha y responsable.</p>
+          <p>Este prototipo representa la estructura base del sistema, construida con HTML5 semántico y pensada para crecer en las siguientes unidades.</p>
+        </div>
+        <figure>
+          <img src="imagen5.jpg" alt="Voluntarios del refugio cuidando a perros y gatos" width="900" height="600">
+          <figcaption>Voluntarios durante la jornada de cuidado en el refugio.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="pie">
+    <div class="pie__interior">
+      <div>
+        <h2>Contacto del refugio</h2>
+        <address>
+          Refugio PatitasSeguras<br>
+          Portoviejo, Manabí, Ecuador<br>
+          Teléfono: <a href="tel:+593990000000">+593 99 000 0000</a><br>
+          Correo: <a href="mailto:contacto@patitasseguras.ec">contacto@patitasseguras.ec</a>
+        </address>
+      </div>
+      <nav aria-label="Enlaces del pie de página">
+        <h2>Navegación</h2>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="reportar.html">Reportar animal</a></li>
+          <li><a href="rescates.html">Rescates</a></li>
+        </ul>
+      </nav>
+      <p class="derechos">&copy; 2026 PatitasSeguras. Prototipo académico de Desarrollo de Sistemas Informáticos, Universidad Técnica de Manabí. Autor: Jean Pierre Contento Rosado.</p>
+    </div>
+  </footer>
+</body>
+</html>
